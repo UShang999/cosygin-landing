@@ -4,6 +4,29 @@
     <meta charset="UTF-8">
     <title>Перевод в РГУ им. А.Н. Косыгина</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Добавляем фон для всей страницы */
+        body {
+            background-image: url('img/bg-tile.png');
+            background-repeat: repeat; /* Картинка будет повторяться, заполняя весь экран */
+            background-attachment: fixed; /* Фон будет оставаться на месте при скролле */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Если у секций заданы свои цвета фона (например, bg--90), 
+           и вы хотите, чтобы сквозь них был виден общий фон, 
+           их нужно сделать полупрозрачными или убрать у них background-color */
+        .section {
+            background-color: rgba(255, 255, 255, 0.8) !important; /* Делает блоки чуть прозрачными */
+            margin-bottom: 20px;
+        }
+
+        /* Убираем стандартный фон у классов из вашего кода, чтобы увидеть картинку */
+        .bg--90, .bg-90 {
+            background-color: rgba(240, 240, 240, 0.7) !important;
+        }
+    </style>
 </head>
 <body>
 
@@ -11,21 +34,18 @@
     <img src="img/logo.png" alt="Логотип" class="logo">
 </header>
 
-    <!-- TOP -->
-<section class="section bg--90">
+    <section class="section bg--90">
     <div class="block">
         <img src="img/block-top.png" class="block-img">
     </div>
 </section>
 
-<!-- HERO -->
 <section class="section bg-90">
     <div class="block">
         <img src="img/block-hero.png" class="block-img">
     </div>
 </section>
 
-<!-- PRESTAGE -->
 <section class="section bg-90">
     <div class="block hover-block">
         <img src="img/block-prestage.png" class="block-img">
@@ -65,7 +85,6 @@
     </div>
 </section>
 
-<!-- DOCS -->
 <section class="section bg--90">
     <div class="block hover-block">
         <img src="img/block-docs.png" class="block-img">
@@ -87,7 +106,6 @@
     </div>
 </section>
 
-<!-- STEPS -->
 <section class="section bg-90">
     <div class="block hover-block">
         <img src="img/steps-empty.png" class="block-img">
@@ -104,7 +122,6 @@
     </div>
 </section>
 
-<!-- WARNING -->
 <section class="section bg--90">
     <div class="block hover-block">
         <img src="img/block-warning.png" class="block-img">
@@ -120,7 +137,6 @@
     </div>
 </section>
 
-<!-- RECOMMENDATIONS -->
 <section class="section bg-90">
     <div class="block hover-block">
         <img src="img/block-recommendations.png" class="block-img">
@@ -135,7 +151,6 @@
     </div>
 </section>
 
-<!-- QUESTIONS -->
 <section class="section bg--90">
     <div class="block hover-block center">
         <img src="img/block-any-other-questions.png" class="block-img">
