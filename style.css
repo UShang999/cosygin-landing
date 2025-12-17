@@ -233,3 +233,99 @@ ul, ol { padding-left: 20px; }
     background: rgba(255, 255, 255, 0.8);
     clip-path: polygon(20% 10%, 90% 50%, 20% 90%); /* Рисуем треугольник */
 }
+
+/* --- СТИЛИ ДЛЯ СЕКЦИИ ФОРМЫ --- */
+.form-container {
+    position: relative;
+    margin-top: 20px;
+}
+
+.form-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    z-index: 5;
+}
+
+.form-header-badge {
+    background: #1a1f2b;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 12px;
+    border: 2px solid #ffb366;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    box-shadow: 0 0 15px rgba(255, 179, 102, 0.3);
+}
+
+.form-card {
+    background: rgba(230, 240, 255, 0.95); /* Светло-голубой фон карточки */
+    width: 450px;
+    padding: 30px 40px;
+    border-radius: 25px;
+    margin-right: 250px; /* Сдвиг влево, чтобы не перекрывать кота справа */
+}
+
+.form-card h3 {
+    color: #4a2b2b; /* Коричневый оттенок заголовка */
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.input-group {
+    background: #fff;
+    border: 2px solid #ffb366;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+.input-group .icon {
+    margin-right: 10px;
+    opacity: 0.5;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+}
+
+.submit-btn {
+    background: #ffb366;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s;
+}
+
+.submit-btn:hover {
+    transform: scale(1.03);
+}
+
+.submit-btn .arrow {
+    font-size: 24px;
+}
+
+.form-notice {
+    font-size: 11px;
+    color: #333;
+    margin-top: 15px;
+    line-height: 1.2;
+}
