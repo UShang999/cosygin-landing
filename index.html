@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Перевод в РГУ им. А.Н. Косыгина</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <section class="screen">
+    <header class="header">
+        <div class="container header-content">
+            <img src="img/image_affc3a.png" alt="Лого" class="logo">
+            <nav class="nav">
+                <a href="#steps">Процесс</a>
+                <a href="#docs">Документы</a>
+                <a href="#reviews">Видео</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="screen bg-1">
         <div class="container">
-            <div class="card hero-card" style="background-image: url('img/hero_bg.png');">
+            <div class="card" style="background-image: url('img/image_affc5d.png');">
                 <div class="badge">🐾 Пошаговый МяуГид</div>
                 <h1>Перевод в РГУ им. А.Н. Косыгина</h1>
                 <p>Подробное руководство по переводу из других высших учебных заведений. Следуйте рекомендациям для успешного зачисления.</p>
@@ -26,99 +37,77 @@
         </div>
     </section>
 
-    <section class="screen">
+    <section class="screen bg-2" id="steps">
         <div class="container">
-            <h2 class="title-light">Твой IT-хаб, где вайб — это стандарт:</h2>
-            <div class="features-grid">
-                <div class="feat-card"><h3>Рядом с метро</h3><p>Вышел — и ты в кампусе.</p></div>
-                <div class="feat-card"><h3>Стильный дизайн</h3><p>Пространство для идей.</p></div>
-                <div class="feat-card"><h3>Зоны отдыха</h3><p>Комфорт для всех.</p></div>
-                <div class="feat-card"><h3>Коворкинг</h3><p>Учись с удовольствием.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="screen">
-        <div class="container">
-            <div class="card stage-card" style="background-image: url('img/prestage_bg.png');">
+            <div class="card" style="background-image: url('img/image_affc98.png');">
                 <div class="section-label">Предварительный этап</div>
-                <div class="stage-content">
-                    <h3>Проверка вакантных мест</h3>
-                    <p>На сайте rguk.ru в разделе "Абитуриенту" — "Вакантные места".</p>
-                    <h3>Связь с деканатом</h3>
-                    <p>📧 itet@rguk.ru | 📞 +7 (495) 811-01-01</p>
-                </div>
+                <h3>1. Проверка вакантных мест</h3>
+                <p>Узнайте о наличии мест на сайте rguk.ru в разделе "Абитуриенту".</p>
+                <h3>2. Связь с деканатом</h3>
+                <p>📧 itet@rguk.ru | 📞 +7 (495) 811-01-01</p>
             </div>
         </div>
     </section>
 
-    <section class="screen">
+    <section class="screen bg-1" id="docs">
         <div class="container">
-            <div class="card stage-card" style="background-image: url('img/docs_bg.png');">
+            <div class="card" style="background-image: url('img/image_affcd5.png');">
                 <div class="section-label">Основная процедура</div>
-                <h3>Комплект документов:</h3>
-                <ul class="custom-list">
-                    <li>Паспорт и СНИЛС</li>
-                    <li>Справка о периоде обучения (справка об обучении)</li>
+                <h3>Необходимые документы:</h3>
+                <ul class="list">
+                    <li>Паспорт (фото + прописка) и СНИЛС</li>
+                    <li>Справка о периоде обучения</li>
                     <li>Справка о статусе студента</li>
-                    <li>Заявление по форме и согласие</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <section class="screen">
+    <section class="screen bg-2">
         <div class="container">
-            <div class="card stage-card" style="background-image: url('img/after_decision_bg.png');">
+            <div class="card" style="background-image: url('img/image_afff9b.png');">
                 <div class="section-label">После положительного решения</div>
-                <div class="steps-flow">
-                    <p>1. Получите справку о принятии на перевод в РГУ.</p>
-                    <p>2. Напишите заявление об отчислении в своем ВУЗе.</p>
-                    <p>3. Предоставьте выписку из приказа об отчислении в РГУ.</p>
-                </div>
+                <p>Шаг 1: Получите справку о переводе в РГУ.</p>
+                <p>Шаг 2: Напишите заявление в своем ВУЗе.</p>
+                <p>Шаг 3: Принесите выписку из приказа.</p>
             </div>
         </div>
     </section>
 
-    <section class="screen">
+    <section class="screen bg-1">
         <div class="container">
-            <div class="card stage-card" style="background-image: url('img/enrollment_bg.png');">
+            <div class="card" style="background-image: url('img/image_afffda.png');">
                 <div class="section-label">После зачисления</div>
-                <h3>Твои первые шаги:</h3>
-                <ul class="custom-list">
-                    <li>Получение студенческого билета</li>
-                    <li>Оформление социальной карты</li>
-                    <li>Доступ в личный кабинет студента</li>
-                </ul>
+                <p>Поздравляем! Теперь ты студент РГУ. Оформи студенческий билет и социальную карту в деканате.</p>
             </div>
         </div>
     </section>
 
-    <section class="screen">
+    <section class="screen bg-2" id="reviews">
         <div class="container">
-            <div class="card reviews-card" style="background-image: url('img/reviews_bg.png');">
-                <h2 style="color: white;">Видео-визитки наших студентов</h2>
-                <div class="video-grid">
-                    <div class="video-placeholder"><span>▶ Видео 1</span></div>
-                    <div class="video-placeholder"><span>▶ Видео 2</span></div>
-                </div>
+            <div class="card" style="background-image: url('img/image_b00016.png');">
+                <h2 style="color: white;">Видео-визитки студентов</h2>
+                <div class="video-placeholder">Здесь будет видео плеер</div>
             </div>
         </div>
     </section>
 
-    <section class="screen">
+    <section class="screen bg-1">
         <div class="container">
-            <div class="card form-card" style="background-image: url('img/final_bg.png');">
+            <div class="card" style="background-image: url('img/image_b00057.png');">
                 <h2>Оставить заявку:</h2>
-                <form class="main-form">
-                    <input type="text" placeholder="+7 XXX XXX XX XX" required>
-                    <input type="text" placeholder="Имя Фамилия" required>
-                    <button type="submit" class="btn btn-orange">Отправить заявку ></button>
+                <form class="form">
+                    <input type="text" placeholder="+7 XXX XXX XX XX">
+                    <input type="text" placeholder="Имя Фамилия">
+                    <button type="submit" class="btn btn-orange">Отправить заявку</button>
                 </form>
-                <p class="form-subtext">Мы свяжемся с тобой в ближайшее время!</p>
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <p>© 2025 РГУ им. А.Н. Косыгина. Все права защищены.</p>
+    </footer>
 
 </body>
 </html>
