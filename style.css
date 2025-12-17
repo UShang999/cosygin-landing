@@ -1,102 +1,105 @@
 :root {
     --orange: #ffb74d;
-    --dark-bg: #1a1a2e;
+    --dark-blue: #1a1a2e;
 }
+
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--dark-bg);
+    background-color: var(--dark-blue);
     color: #333;
-    overflow-x: hidden;
+    line-height: 1.6;
 }
 
-/* Эффект зеркального фона 90/-90 */
-.screen-section {
-    position: relative;
-    padding: 80px 0;
+/* ЗЕРКАЛЬНЫЙ ФОН */
+.screen {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    padding: 80px 0;
     background-image: url('img/bg_pattern.jpg');
     background-size: cover;
-    background-position: center;
+    background-attachment: fixed;
 }
 
-/* Вращение фона каждой четной секции */
-.screen-section:nth-child(even) {
-    transform: rotate(180deg);
-}
-
-/* Возвращаем контент в нормальное положение */
-.screen-section:nth-child(even) .container {
-    transform: rotate(-180deg);
-}
+/* Эффект вращения фона */
+.screen:nth-child(odd) { transform: rotate(0deg); }
+.screen:nth-child(even) { transform: rotate(180deg); }
+.screen:nth-child(even) .container { transform: rotate(-180deg); }
 
 .container {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
     width: 100%;
 }
 
-/* Карточки с котиками */
-.content-card {
+/* КАРТОЧКИ С АНИМАЦИЕЙ */
+.card {
     background-size: cover;
     background-position: center;
     border-radius: 40px;
     padding: 60px;
     transition: all 0.4s ease;
-    cursor: pointer;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 }
 
-/* Анимация: выделение темным при наведении */
-.content-card:hover {
+/* АНИМАЦИЯ ПРИ НАВЕДЕНИИ: Затемнение */
+.card:hover {
+    filter: brightness(0.8); /* Блок становится темнее */
     transform: translateY(-10px);
-    filter: brightness(0.8); /* Затемнение всего блока */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
 
-.hero-card { min-height: 450px; }
-.wide-card { min-height: 500px; }
+/* ТЕКСТ */
+h1 { font-size: 3rem; font-weight: 800; margin-bottom: 20px; }
+h2 { font-size: 2.2rem; margin-bottom: 30px; }
+.title-light { color: white; text-align: center; }
 
-/* Текстовые элементы */
-h1 { font-size: 42px; font-weight: 800; margin: 20px 0; }
-.title-light { color: white; text-align: center; margin-bottom: 50px; }
-
+/* ЭЛЕМЕНТЫ */
 .badge {
     background: var(--orange);
     display: inline-block;
-    padding: 10px 20px;
-    border-radius: 15px;
-    font-weight: bold;
-}
-
-/* Кнопки */
-.btn {
-    padding: 15px 35px;
-    border-radius: 30px;
-    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
     font-weight: 700;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 16px;
+    margin-bottom: 15px;
 }
 
-.btn-white { background: #fff; margin-right: 15px; }
+.section-label {
+    background: #fff;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+/* КНОПКИ */
+.btn {
+    padding: 16px 32px;
+    border-radius: 35px;
+    border: none;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-white { background: white; margin-right: 15px; }
 .btn-orange { background: var(--orange); }
 
-/* Подсветка кнопок (индивидуальный цвет) */
-.btn-orange:hover {
-    box-shadow: 0 0 15px var(--orange);
-    filter: brightness(1.1);
+.btn:hover {
+    background: #222;
+    color: white;
+    box-shadow: 0 0 20px var(--orange);
 }
 
-/* Сетка для IT-хаба */
-.features-grid {
+/* СЕТКИ */
+.features-grid, .video-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
 }
 
 .feat-card {
@@ -105,22 +108,32 @@ h1 { font-size: 42px; font-weight: 800; margin: 20px 0; }
     border-radius: 25px;
     transition: 0.3s;
 }
+.feat-card:hover { background: #bbdefb; filter: brightness(0.9); }
 
-.feat-card:hover {
-    background: #c3dafb; /* Темнее при наведении */
+.video-placeholder {
+    height: 200px;
+    background: rgba(255,255,255,0.1);
+    border: 2px dashed #fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
-/* Форма */
-.form-card {
-    max-width: 800px;
-    margin: 0 auto;
+/* СПИСКИ */
+.custom-list {
+    list-style: "🐾 ";
+    padding-left: 20px;
 }
 
-.lead-form input {
+.custom-list li { margin-bottom: 10px; font-weight: 600; }
+
+/* ФОРМА */
+.main-form input {
     width: 100%;
     padding: 15px;
     margin-bottom: 15px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    font-family: inherit;
+    border-radius: 15px;
+    border: 1px solid #ddd;
 }
