@@ -4,29 +4,6 @@
     <meta charset="UTF-8">
     <title>Перевод в РГУ им. А.Н. Косыгина</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Добавляем фон для всей страницы */
-        body {
-            background-image: url('img/bg-tile.png');
-            background-repeat: repeat; /* Картинка будет повторяться, заполняя весь экран */
-            background-attachment: fixed; /* Фон будет оставаться на месте при скролле */
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Если у секций заданы свои цвета фона (например, bg--90), 
-           и вы хотите, чтобы сквозь них был виден общий фон, 
-           их нужно сделать полупрозрачными или убрать у них background-color */
-        .section {
-            background-color: rgba(255, 255, 255, 0.8) !important; /* Делает блоки чуть прозрачными */
-            margin-bottom: 20px;
-        }
-
-        /* Убираем стандартный фон у классов из вашего кода, чтобы увидеть картинку */
-        .bg--90, .bg-90 {
-            background-color: rgba(240, 240, 240, 0.7) !important;
-        }
-    </style>
 </head>
 <body>
 
@@ -34,7 +11,43 @@
     <img src="img/logo.png" alt="Логотип" class="logo">
 </header>
 
-    <section class="section bg--90">
+<section class="section">
+    <div class="block transfer-container">
+        <img src="img/block-transfer.png" class="block-img">
+        
+        <div class="transfer-overlay">
+            <h2 class="transfer-title">Твой IT-хаб, где вайб — это стандарт:</h2>
+
+            <div class="transfer-grid">
+                <div class="info-card">
+                    <h4>Здание рядом с метро</h4>
+                    <p>Вышел — и ты в кампусе. Экономь время, наслаждайся комфортом с первого шага.</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>Дизайн, который вдохновляет</h4>
+                    <p>Забудь о серых стенах. У нас стильные, светлые пространства для учебы и жизни.</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>Комфорт для всех:</h4>
+                    <p>Продуманные зоны отдыха, включая цивилизованное место для передышек.</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>Твой личный коворкинг:</h4>
+                    <p>Кафетерии с Wi-Fi, розетками и уютными зонами. Работай, общайся, перезагружайся с ноутом.</p>
+                </div>
+            </div>
+
+            <div class="transfer-footer-banner">
+                <p>Переходи в РГУ им. А.Н. Косыгина — там, где твой потенциал расцветает в комфорте и стиле!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg--90">
     <div class="block">
         <img src="img/block-top.png" class="block-img">
     </div>
@@ -49,32 +62,17 @@
 <section class="section bg-90">
     <div class="block hover-block">
         <img src="img/block-prestage.png" class="block-img">
-
         <div class="block-content">
             <h2>1. Предварительный этап</h2>
-
             <h3>Проверка вакантных мест</h3>
-            <p>
-                Узнайте о наличии вакантных бюджетных мест
-                (если перевод планируется на бюджет)
-                и общих вакантных местах.
-            </p>
-
-            <p class="small">
-                rguk.ru → Абитуриенту → Перевод из другого ВУЗа → Вакантные места
-            </p>
-
+            <p>Узнайте о наличии вакантных бюджетных мест (если перевод планируется на бюджет) и общих вакантных местах.</p>
+            <p class="small">rguk.ru → Абитуриенту → Перевод из другого ВУЗа → Вакантные места</p>
             <h3>Связь с деканатом</h3>
             <p>
-                Email: <a href="mailto:itet@rguk.ru">itet@rguk.ru</a><br>
-                Телефон: <a href="tel:+74958110101">+7 (495) 811-01-01</a>
-                (Александра Максимовна)
+                Email: <a href="mailto:itet@rguk.ru" style="color:#fff">itet@rguk.ru</a><br>
+                Телефон: <a href="tel:+74958110101" style="color:#fff">+7 (495) 811-01-01</a> (Александра Максимовна)
             </p>
-
-            <p><strong>Отправьте предварительно:</strong><br>
-                Справку об обучении (с оценками)
-            </p>
-
+            <p><strong>Отправьте предварительно:</strong> Справку об обучении (с оценками)</p>
             <h4>Обязательно укажите:</h4>
             <ul>
                 <li>Направление и профиль подготовки</li>
@@ -88,16 +86,14 @@
 <section class="section bg--90">
     <div class="block hover-block">
         <img src="img/block-docs.png" class="block-img">
-
         <div class="block-content">
             <h2>Основная процедура</h2>
             <h3>Подготовка и подача документов</h3>
-
             <ul>
                 <li>Копия паспорта (фото + прописка)</li>
                 <li>Копия СНИЛС</li>
-                <li>Справка о статусе студента (оригинал, текущий месяц)</li>
-                <li>Справка о периоде обучения (оригинал, текущий месяц)</li>
+                <li>Справка о статусе студента (оригинал)</li>
+                <li>Справка о периоде обучения (оригинал)</li>
                 <li>Копии лицензии и аккредитации ВУЗа</li>
                 <li>Заявление по форме</li>
                 <li>Согласие на обработку персональных данных</li>
@@ -109,7 +105,6 @@
 <section class="section bg-90">
     <div class="block hover-block">
         <img src="img/steps-empty.png" class="block-img">
-
         <div class="block-content">
             <h2>После положительного решения</h2>
             <ol>
@@ -125,7 +120,6 @@
 <section class="section bg--90">
     <div class="block hover-block">
         <img src="img/block-warning.png" class="block-img">
-
         <div class="block-content">
             <h2>После зачисления</h2>
             <p><strong>Поздравляем с зачислением!</strong></p>
@@ -137,28 +131,12 @@
     </div>
 </section>
 
-<section class="section bg-90">
-    <div class="block hover-block">
-        <img src="img/block-recommendations.png" class="block-img">
-
-        <div class="block-content">
-            <h2>Полезные советы</h2>
-            <ul>
-                <li>Следите за сроками подачи документов</li>
-                <li>Сохраняйте копии всех документов</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
 <section class="section bg--90">
     <div class="block hover-block center">
         <img src="img/block-any-other-questions.png" class="block-img">
-
         <div class="block-content">
             <h2>Остались вопросы?</h2>
             <p>Мы готовы помочь вам на каждом этапе</p>
-
             <div class="buttons">
                 <a href="mailto:itet@rguk.ru" class="btn">Написать в деканат</a>
                 <a href="tel:+74958110101" class="btn">Позвонить</a>
@@ -167,7 +145,7 @@
     </div>
 </section>
 
-<footer class="footer bg-90">
+<footer class="footer">
     © 2025 РГУ им. А.Н. Косыгина
 </footer>
 
